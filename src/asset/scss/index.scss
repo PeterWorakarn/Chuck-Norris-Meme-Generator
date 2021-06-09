@@ -1,0 +1,264 @@
+@import "base-tailwind";
+@import "variable";
+
+*::selection {
+    background: $accent-color;
+    color: $white-color;
+}
+
+body {
+    min-width: 100vw;
+    overflow-x: hidden;
+
+    .App {
+        max-width: 1300px;
+        font-family: $Oxygen;
+
+        .loading {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 1000;
+            display: grid;
+            place-items: center;
+            color: $accent-color;
+            background: rgba(255, 255, 255, 0.5);
+
+            &__icons {
+                font-size: 10rem;
+                animation-name: spin;
+                animation-duration: 2.5s;
+                animation-iteration-count: infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+
+        .container {
+            padding: 2rem 5rem;
+            min-width: 100vw;
+            min-height: 90vh;
+            background: $accent-color;
+            display: flex;
+
+            &__left {
+                width: 60%;
+                max-width: 650px;
+
+                h1 {
+                    font-weight: bold;
+                    font-size: 5rem;
+                    line-height: 114px;
+                    letter-spacing: -4.16px;
+                    color: $white-color;
+                }
+            }
+
+            &__right {
+                width: 40%;
+                color: $main-text-color;
+
+                .form {
+                    border-radius: .5rem;
+                    background: $white-color;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+                    padding: 2rem 2.5rem;
+
+                    &__headline {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+
+                    &__alert {
+                        display: grid;
+                        margin-top: 1rem;
+                        width: 100%;
+                        padding: 14px 16px;
+                        grid-template-columns: 30px 1fr;
+                        background: $warn-color;
+                        border-radius: 4px;
+                        color: $white-color;
+                        opacity: 0.75;
+
+                        p {
+                            font-size: .45rem;
+                            font-weight: bold;
+                        }
+
+                        svg {
+                            display: unset;
+                        }
+                    }
+
+                    &__btn {
+                        min-height: 44px;
+                        width: 100%;
+                        background: $accent-color;
+                        color: $white-color;
+                        border-radius: .15rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        margin-top: 1rem;
+
+                        &:focus {
+                            outline: none;
+                            border: none;
+                        }
+                    }
+
+                    .input {
+                        margin-top: .75rem;
+                        display: flex;
+                        flex-direction: column;
+
+                        &__field {
+                            border: none;
+                            border-radius: 0;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+                            caret-color: $accent-color;
+                            border-radius: 0px;
+                            font-size: 1rem;
+                            font-weight: 400;
+                            letter-spacing: .009375em;
+                            padding: 16px;
+                            background: $gray-color-1;
+
+                            &:focus-visible {
+                                background: $gray-color-2;
+                                outline: none;
+                                border-bottom: 1px solid $accent-color;
+                            }
+
+                            &:focus {
+                                color: $main-text-color
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .arrow {
+            animation-name: down;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            
+            &__icons {
+                font-size: 4rem;
+                opacity: 0.75;
+            }
+
+            @keyframes down {
+                0% {
+                    transform: translateY(-40px);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(-40px);
+                }
+            }
+        }
+
+        .results {
+            margin: 5px 5px 0px 5px;
+            min-width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 5px;
+
+            .result {
+                background: $accent-color;
+                min-height: 10rem;
+                border-radius: 3px;
+                padding: 2rem 2.5rem;
+
+                &__text {
+                    display: grid;
+                    grid-template-columns:50px 1fr;
+
+                    .quote__icons {
+                        font-size: 1.25em;
+                        display: unset;
+                    }
+
+                    .text {
+                        font-weight: 500;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:840px) {
+    body {
+        .App {
+            .container {
+                padding: 25px 5px 5px;
+                flex-direction: column;
+
+                &__left {
+                    width: 100%;
+
+                    h1 {
+                        border-left: 5px solid $white-color;
+                        padding-left: 1.25rem;
+                        font-weight: normal;
+                        font-size: 2.3rem;
+                        line-height: 60px;
+                        letter-spacing: 1.25px;
+                    }
+
+                    margin-bottom: 2.5rem;
+                }
+
+                &__right {
+                    width: 100%;
+                    margin: 15px 0px 25px 0px;
+
+                    .form {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .results {
+                grid-template-columns: 1fr;
+                grid-gap: 5px;
+                margin: 15px 0px;
+                border-radius: 0px;
+
+                .result {
+                    &__text {
+                        display: grid;
+                        grid-template-columns:50px 1fr;
+    
+                        .quote__icons {
+                            font-size: 1.25em;
+                            display: unset;
+                        }
+    
+                        .text {
+                            font-weight: 500;
+                            font-size: 1.5em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
