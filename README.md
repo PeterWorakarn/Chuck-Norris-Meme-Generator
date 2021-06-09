@@ -1,5 +1,5 @@
 # CHUCK NORRIS MEME GENERATOR
-![Banner](https://github.com/PeterWorakarn/Price_Calculator/blob/master/Slide%20%E2%80%93%20Price%403x.png)
+![Banner](https://github.com/PeterWorakarn/Chuck-Norris-Meme-Generator/blob/main/Slide%20%E2%80%93%20Chuck%20Norris%20Meme@3x.png)
 โปรแกรมสร้างมีมที่มาจาก [Chuck Norris API](https://www.icndb.com/api/)
 โดยผู้ใช้งานสมารถกรอกชื่อ ,นามสกุล และจำนวน Meme เพื่อเปลี่ยนชื่อ Chuck Norris เป็นชื่อตัวเองได้ เพื่อให้ใครก็ได้ ได้มี Meme ของตัวเอง 
 
