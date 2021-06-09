@@ -15,7 +15,7 @@ function App() {
   const fetchJokes = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`http://api.icndb.com/jokes/random/${amount}?escape=javascript&firstName=${firstName}&lastName=${lastName}`);
+      const response = await fetch(`https://api.icndb.com/jokes/random/${amount}?escape=javascript&firstName=${firstName}&lastName=${lastName}`);
       const data = await response.json();
       setJokes(data.value);
       setLoading(false);
