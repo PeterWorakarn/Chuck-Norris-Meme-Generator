@@ -42,21 +42,21 @@ function App() {
             <div className="input --firstName">
               <div className="input__wrapper">
                 <label className="input__label" htmlFor="firstName">First Name</label>
-                {errors.firstName?.type === 'required' && <div data-testid="firstName-error" className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
+                {errors.firstName?.type === 'required' && <div className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
               </div>
               <input className="input__field" type="text" name="firstName" {...register("firstName",{required: true})} />
             </div>
             <div className="input --lastName">
               <div className="input__wrapper">
                 <label className="input__label" htmlFor="lastName">Last Name</label>
-                {errors.lastName?.type === 'required' && <div data-testid="lastName-error" className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
+                {errors.lastName?.type === 'required' && <div className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
               </div>
               <input className="input__field" type="text" name="lastName" {...register("lastName",{required: true})} />
             </div>
             <div className="input --amount">
               <div className="input__wrapper">
                 <label className="input__label" htmlFor="amount">Amount</label>
-                {errors.amount && <div data-testid="amount-error" className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
+                {errors.amount && <div className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
               </div>
               <input className="input__field" type="number" name="amount" {...register("amount",{required: true,min:1})} />
             </div>
