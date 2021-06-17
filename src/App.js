@@ -58,7 +58,7 @@ function App() {
                 <label className="input__label" htmlFor="amount">Amount</label>
                 {errors.amount && <div className="input__alert"><IconContext.Provider value={{ className: "input__icon" }}><FaExclamationTriangle /></IconContext.Provider></div>}
               </div>
-              <input className="input__field" type="number" name="amount" {...register("amount",{required: true,min:1})} />
+              <input inputMode="decimal" className="input__field" type="number" name="amount" {...register("amount",{required: true,min:1})} />
             </div>
             <button className="form__btn" type="submit">Submit</button>
           </form>
