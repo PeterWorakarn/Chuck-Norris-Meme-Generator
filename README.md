@@ -9,6 +9,7 @@
 
 ### 🤠  ตัวอย่าง Meme ###
 > <strong>"Iron Man"</strong> was originally going to be called <strong>\"Chuck Norris: The Movie,\"</strong> but everyone who knew about it got roundhouse kicked. Afterwords, Chuck Norris hired Robert Downey Jr. and had the movie called <strong>\"Iron Man\"</strong>
+
 > "When Chuck Norris go's to Mcdonalds he turns everyone into an unhappy meal."
 
 #### 💻 Languages and Tools:
